@@ -50,7 +50,7 @@ function Hero() {
             
             <div className="hero-shape">
                 
-                 <img src={rightImage} height={500} width={500}/>
+                 <img src={rightImage} height={500} width={300}/>
 
                
              
