@@ -3,15 +3,19 @@
 .Portfolio {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    padding: 1rem;
     gap: 1rem;
     width: 100%;
-    padding: 2rem;
-    height: auto;
+    height: 900px;
     flex-grow: 1;
     overflow: hidden;
     position: relative;
-    background-color: #000; 
+    background-color: #000;
+    background-image:  url(../../images/Rectangle\ swapped.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    
 }
 
 .Portfolio h1 {
@@ -25,30 +29,20 @@
 
 .Portfolio_samples {
     display: flex;
-    justify-content: space-between;
+   gap: 2rem;
     width: 100%;
-    gap: 0.5rem;
     z-index: 1001;
+  
 
-}
-
-.Portfolio .slope {
-    position: absolute;
-    opacity: 1;
-    top: 18%;
-    left: -5%;
-    height: auto;
-    width: 100%;
 }
 
 .carousel_container {
     width: 400px;
-    height: 500px;
+    height: 200px;
     padding: 0rem 1rem;
     overflow: hidden;
     flex-shrink: 1;
 }
-
 .carousel_container:hover {
     height: auto;
 }
@@ -81,30 +75,16 @@
 
 .slick-prev,
 .slick-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1000;
+   left: 8%;
 }
 
-.slick-prev {
-    left: -20%;
-}
-
-.slick-next {
-    right: -20%;
-}
-
-.slick-prev:before,
-.slick-next:before {
-    color: #76b4ce;
-}
 
 @media (max-width: 800px) {
     .Portfolio_samples {
-        flex-direction: column;
         align-items: center;
         overflow: hidden;
+        flex-wrap: wrap;
+        justify-content: center;
       
     }
     .carousel_container {
@@ -119,4 +99,16 @@
     .slick-next:before {
         font-size: 20px; /* Adjusted size for better visibility on smaller screens */
     }
+
+  
+}
+@media (max-width:400px){
+    
+    .Portfolio .slope {
+        position: fixed;
+            opacity: 1;
+           transform: translate(20%, 70%);
+            height: auto;
+            width: 100%;
+        }
 }

@@ -103,9 +103,9 @@ function Portfolio() {
   </div>
  
             </div >
-            <div>
+            {/* <div>
                 <img className="slope" src={slope} alt="Slope" />
-            </div>
+            </div> */}
         </div >
     )
 }

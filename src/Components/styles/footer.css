@@ -7,9 +7,15 @@
     font-family: 'Inter', sans-serif;
     border-top: solid 2px #555;
 }
-.footer-logo{
-  width: 100px;
+.footer-logo-container{
+  width: 150px;
   height:60px;
+  text-align: center;
+}
+.footer-logo{
+    width: 150px;
+    height:60px;
+    text-align: center;
 }
 .footer-container {
     display: flex;
@@ -17,14 +23,13 @@
     justify-content: space-between;
     align-items: flex-start;
 }
-.footer-logo{
-  text-align: center;
-}
+
 .footer-logo h2 {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 20px;
     font-family: Lemon;
+   
 }
 
 .footer-links {
@@ -58,6 +63,7 @@
     display: flex;
     gap: 15px;
     margin-top: 20px;
+
 }
 
 .footer-social a {
@@ -81,3 +87,17 @@
     font-size: 14px;
     color: #777;
 }
+
+@media(max-width:650px){
+  .footer-container{
+    flex-wrap: wrap;
+    gap: rem;
+  }
+  .footer-logo-container{
+    margin-bottom: 8rem;
+  }
+  .footer-links{
+    flex-wrap: wrap;
+  }
+}
+
