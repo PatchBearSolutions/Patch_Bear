@@ -48,10 +48,10 @@ function Portfolio() {
     setShuffledImages(shuffleArray([...images3]));
   }, []);
 
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 930);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 700);
 
   const handleResize = () => {
-    setIsMobile(window.innerWidth <= 930);
+    setIsMobile(window.innerWidth <= 700);
   };
 
   useEffect(() => {
@@ -74,39 +74,6 @@ function Portfolio() {
       <h1> Our Portfolio</h1>
 
       <div className="Portfolio_samples">
-        {isMobile ? (
-          <Slider {...settings}>
-            <div className="carousel_container">
-              <Slider {...settings}>
-                {images1.map(image => (
-                  <div key={image.id} className="carousel_card">
-                    <img height={100} width={200} src={image.src} alt={image.alt} className="carousel_image" />
-                  </div>
-                ))}
-              </Slider>
-            </div>
-            <div className="carousel_container">
-              <Slider {...settings}>
-                {images2.map(image => (
-                  <div key={image.id} className="carousel_card">
-                    <img height={100} width={200} src={image.src} alt={image.alt} className="carousel_image" />
-                  </div>
-                ))}
-              </Slider>
-            </div>
-            <div className="carousel_container long">
-              <Slider {...settings}>
-                {shuffledImages.map(image => (
-                  <div key={image.id} className="carousel_card">
-                    <img height={100} width={200} src={image.src} alt={image.alt} className="carousel_image" />
-                  </div>
-                ))}
-              </Slider>
-            </div>
-          </Slider>
-   
-  ) : (
-    <div className="Portfolio_samples">
     <div className="carousel_container">
     <Slider {...settings}>
       {images1.map(image => (
@@ -134,8 +101,7 @@ function Portfolio() {
       ))}
     </Slider>
   </div>
-  </div>
-  )}
+ 
             </div >
             <div>
                 <img className="slope" src={slope} alt="Slope" />
