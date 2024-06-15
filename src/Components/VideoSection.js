@@ -1,50 +1,88 @@
 import React, { useEffect, useRef } from "react";
-import video from "./vabout.mp4";
-import video2 from "../images/Seamless.mp4";
-import "./styles/aboutVideo.css";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-function VideoSection() {
-    const videoRefs = [useRef(null), useRef(null)];
+const videos = [
+  { id: 1, src: 'Seamless.mp4', duration: 5000 },
+  { id: 2, src: 'vabout.mp4', duration: 5000 },
+];
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry, index) => {
-                    if (entry.isIntersecting) {
-                        videoRefs[index].current.play();
-                    } else {
-                        videoRefs[index].current.pause();
-                    }
-                });
-            },
-            { threshold: 0.5 } // Adjust threshold for better triggering
-        );
+const VideoCarousel = () => {
+  const videoRefs = useRef([]);
 
-        videoRefs.forEach((videoRef, index) => {
-            if (videoRef.current) {
-                observer.observe(videoRef.current);
-            }
-        });
+  const settings = {
+    dots: true,
+    arrows: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    afterChange: current => handleVideoPlay(current),
+  };
 
-        return () => {
-            videoRefs.forEach((videoRef) => {
-                if (videoRef.current) {
-                    observer.unobserve(videoRef.current);
-                }
-            });
-        };
-    }, []);
+  const handleVideoPlay = (current) => {
+    videoRefs.current.forEach((video, index) => {
+      if (index === current) {
+        video.play();
+      } 
+      
+    });
+  };
 
-    return (
-        <div className="about_video">
-            <video ref={videoRefs[0]} loop className="hero-video" width={600} muted>
-                <source src={video2} type="video/mp4" />
-            </video>
-            <video ref={videoRefs[1]} loop className="hero-video" width={600} muted>
-                <source src={video} type="video/mp4" />
-            </video>
-        </div>
-    );
-}
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
+    };
 
-export default VideoSection;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const video = entry.target;
+        if (entry.isIntersecting) {
+          video.play();
+        } 
+      });
+    }, options);
+
+    videoRefs.current.forEach((video) => {
+      if (video) {
+        observer.observe(video);
+      }
+    });
+
+    // Call handleVideoPlay on initial mount
+    handleVideoPlay(0); // Assuming you want the first video to play initially
+
+    return () => {
+      videoRefs.current.forEach((video) => {
+        if (video) {
+          observer.unobserve(video);
+        }
+      });
+    };
+  }, []);
+
+  return (
+    <div className="video-carousel">
+      <Slider {...settings}>
+        {videos.map((video, index) => (
+          <div key={video.id}>
+            <video
+              ref={(el) => (videoRefs.current[index] = el)}
+              src={video.src}
+              width="100%"
+              height="auto"
+              controls={false}
+              muted
+            />
+          </div>
+        ))}
+      </Slider>
+    </div>
+  );
+};
+
+export default VideoCarousel;

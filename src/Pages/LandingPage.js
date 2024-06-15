@@ -22,27 +22,29 @@ function LandingPage(){
       
     return(
         <div>
-      
-         <Navbar/>
+      <section id='Navbar'>
+        
+      <Navbar/>
+      </section>
     
 
-            <section className="fade-section" data-aos="fade-up">
+            <section id='Hero' className="fade-section" data-aos="fade-up">
             <Hero/>
             </section>
-            <section className="fade-section" data-aos="fade-up">
+            <section id='ProgressSection' className="fade-section" data-aos="fade-up">
             <ProgressSection/>
             </section>
-            <section className="fade-section" data-aos="fade-up">
+            <section id='About' className="fade-section" data-aos="fade-up">
             <About/>
             </section>
-            <section className="fade-section" data-aos="fade-up">
+            <section id='VideoSection' className="fade-section" data-aos="fade-up">
                 <VideoSection/>
             </section>
-            <section className="fade-section" data-aos="fade-up">
+            <section id='Portfolio' className="fade-section" data-aos="fade-up">
                 <Portfolio/>
             </section>
           
-        <section className="fade-section" data-aos="fade-up">
+        <section id='Footer'>
               <Footer/>
             </section>
        

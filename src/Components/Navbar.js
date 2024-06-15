@@ -20,16 +20,24 @@ const Navbar = () => {
             </div>
         <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
           <li>
-            <a href="#home">Home</a>
-          </li>
-          <li>
-            <a href="#About">About</a>
-          </li>
-          <li>
-            <a href="#Services">Services</a>
-          </li>
-          <li>
-            <a href="#Contact">Contact</a>
+          <a href="#Navbar">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#ProgressSectionn">
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="#About">
+                  Services
+                </a>
+              </li>
+              <li>
+                <a href="#Footer">
+                  Contact
+                </a>
           </li>
         </ul>
         <button className="menu-toggle" onClick={toggleSidebar}>
@@ -41,22 +49,22 @@ const Navbar = () => {
           <div className="sidebar">
             <ul>
               <li>
-                <a href="#" onClick={toggleSidebar}>
+                <a href="#Navbar">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#" onClick={toggleSidebar}>
+                <a href="#ProgressSectionn">
                   About
                 </a>
               </li>
               <li>
-                <a href="#" onClick={toggleSidebar}>
+                <a href="#About">
                   Services
                 </a>
               </li>
               <li>
-                <a href="#" onClick={toggleSidebar}>
+                <a href="#Footer">
                   Contact
                 </a>
               </li>
