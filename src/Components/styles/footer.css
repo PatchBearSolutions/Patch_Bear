@@ -6,6 +6,7 @@
     padding: 40px 20px;
     font-family: 'Inter', sans-serif;
     border-top: solid 2px #555;
+    width: 100%;
 }
 .footer-logo-container{
   width: 150px;
@@ -13,7 +14,7 @@
   text-align: center;
 }
 .footer-logo{
-    width: 120px;
+    width: 100px;
     height:60px;
     text-align: center;
 }
