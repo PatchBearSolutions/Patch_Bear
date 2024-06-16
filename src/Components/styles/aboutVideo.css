@@ -1,17 +1,12 @@
 .video-carousel {
-    width: 80%;
-    margin: 1rem auto;
-  }
-  
-  .slick-prev:before,
-  .slick-next:before {
-    color: #000;
-  }
-  
-  
-  .slick-prev,
-  .slick-next {
-    display: none !important;  /* Ensure arrows are hidden */
-  }
-
-  
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+height: 500px;
+  background-color: #000; 
+}
+video{
+  height: 1000px;
+  width: 100%;
+}

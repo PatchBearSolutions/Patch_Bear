@@ -1,86 +1,42 @@
 import React, { useEffect, useRef } from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
-const videos = [
-  { id: 1, src: 'Seamless.mp4', duration: 5000 },
-  { id: 2, src: 'vabout.mp4', duration: 5000 },
-];
+import Video from "../images/dev video.mp4";
+import "./styles/aboutVideo.css"
 
 const VideoCarousel = () => {
-  const videoRefs = useRef([]);
-
-  const settings = {
-    dots: true,
-    arrows: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: false,
-    afterChange: current => handleVideoPlay(current),
-  };
-
-  const handleVideoPlay = (current) => {
-    videoRefs.current.forEach((video, index) => {
-      if (index === current) {
-        video.play();
-      } 
-      
-    });
-  };
+  const videoRef = useRef(null);
 
   useEffect(() => {
-    const options = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.5,
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        const video = entry.target;
+    const handleIntersection = (entries) => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
-          video.play();
-        } 
-      });
-    }, options);
-
-    videoRefs.current.forEach((video) => {
-      if (video) {
-        observer.observe(video);
-      }
-    });
-
-    // Call handleVideoPlay on initial mount
-    handleVideoPlay(0); // Assuming you want the first video to play initially
-
-    return () => {
-      videoRefs.current.forEach((video) => {
-        if (video) {
-          observer.unobserve(video);
+          videoRef.current.play();
+        } else {
+          videoRef.current.pause();
         }
       });
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, {
+      threshold: 0.5,
+    });
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => {
+      if (videoRef.current) {
+        observer.unobserve(videoRef.current);
+      }
     };
   }, []);
 
   return (
     <div className="video-carousel">
-      <Slider {...settings}>
-        {videos.map((video, index) => (
-          <div key={video.id}>
-            <video
-              ref={(el) => (videoRefs.current[index] = el)}
-              src={video.src}
-              width="100%"
-              height="auto"
-              controls={false}
-              muted
-            />
-          </div>
-        ))}
-      </Slider>
+      <video ref={videoRef} width="600" loop muted>
+        <source src={Video} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>
   );
 };

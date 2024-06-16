@@ -8,12 +8,11 @@
     overflow: hidden;
     background: #000000;
     align-items: center;
-
+width: 100%;
 
 }
 
 .hero-text, .hero-shape {
-   
     transition: all 1s ease;
     display: flex;
     justify-content: center;
@@ -24,7 +23,6 @@
     color: #a7a1a1;
     font-size: 60px;
     font-weight: 400;
-  
     z-index: 2;
     opacity: 1;
     transition: all 2s ease;
@@ -48,21 +46,9 @@
     opacity: 1;
 }
 
-.hero-text.complete {
-    left: 10%;
-    transform: translateX(-10%);
-    opacity: 1;
-}
-
-.hero-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-}
 
 .items_left{
-    padding: 2rem;
+    padding: 3rem;
     display: flex;
     flex-direction: column;
     align-items: left;
