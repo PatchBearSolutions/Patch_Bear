@@ -19,19 +19,6 @@ align-content: center;
 padding: 2rem;
 
 }
-/* .slope_container{
-    height: auto;
-    position: static;
-    width: 100%;
-    overflow: hidden;
-}
-.slope {
-    position: fixed;
-    opacity: 1;
-   transform: translate(-5%, -60%);
-    height: auto;
-    width: 100%;
-} */
 
 .progress_title {
     color: #ffffff;
@@ -154,9 +141,7 @@ padding: 2rem;
         transform: translate(-50%, -50%) rotate(0deg);
         top:-30%;
     }
-    /* 50% {
-top: -50%;
-    } */
+  
     100% {
         transform: translate(-50%, -50%) rotate(360deg);
        top: -30%;

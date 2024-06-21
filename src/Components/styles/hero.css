@@ -58,7 +58,7 @@
 
 .what_we_do {
     display: inline-flex;
-    width: 6ch; /* Adjust the width to fit your longest word */
+    width: 6ch; 
     font-weight: 800;
     color: #319BC9;
     overflow: hidden;

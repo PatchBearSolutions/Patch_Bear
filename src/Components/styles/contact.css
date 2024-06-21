@@ -1,0 +1,113 @@
+.contact_section{
+padding: 2rem;
+
+}
+.contact-us {
+    color: white;
+    border-radius: 8px;
+  padding: 1rem;
+    border: 3px solid #319BC9;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+  }
+  
+  .contact_section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .contact-us form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.5rem;
+    width: 60%;
+    align-items: center;
+  }
+  
+  .contact-us label {
+    font-weight: 600;
+    font-size: 20px;
+  }
+  
+  .contact-us input{
+    height: 40px;
+  }
+  .contact-us textarea{
+    height: 150px;
+  }
+  .contact-us input,
+  .contact-us textarea {
+    color: white;
+    background-color: 3px solid #319BC9;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 24px;
+    padding: 0.5rem;
+  }
+  .contact-us input:focus,
+  .contact-us textarea:focus {
+    outline: none;
+    background-color: black;
+    color: white;
+    border: 3px solid #319BC9;
+    border-radius: 4px;
+  }
+  
+  .contact-us button {
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+    border: solid 2px #319BC9;
+    background-color: black;
+    color: #a7a1a1;
+    padding: 16px;
+    border-radius: 10px;
+    width: 250px;
+   text-align: center;
+   position: relative;
+   overflow: hidden;
+   display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+.contact-us button:before{
+   content: '';
+    display: block;
+    position: absolute;
+    background-color: #319BC9;
+    width: 60px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .5s;
+    filter: blur(30px);
+    transform: translateX(-130px ) skewX(-15deg);
+}
+.contact-us button:after{
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: #a7a1a1;
+    width: 30px;
+    height: 100%;
+    left: 30px;
+    top: 0;
+    opacity: 0;
+    filter: blur(30px);
+    transform: translateX(-100px ) skewX(-15deg);
+}
+
+.contact-us button:hover:before{
+   opacity: .6;
+   transition: 2s;
+   transform: translateX(300px) skewX(-15deg);
+}
+.contact-us button:focus{
+    transform: translateY(10px);
+}

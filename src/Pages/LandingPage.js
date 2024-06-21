@@ -8,6 +8,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Portfolio from '../Components/portfolio.js';
 import Footer from '../Components/footer.js';
+import ContactUs from '../Components/contactUs.js';
 
 
 
@@ -43,7 +44,9 @@ function LandingPage(){
             <section id='Portfolio' className="fade-section" data-aos="fade-up">
                 <Portfolio/>
             </section>
-          
+            <section id='ContactUs' className="fade-section" data-aos="fade-up">
+        <ContactUs/>
+       </section>
         <section id='Footer'>
               <Footer/>
             </section>

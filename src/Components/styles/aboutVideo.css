@@ -1,12 +1,11 @@
 .video-carousel {
-  margin: 0;
+  margin: 1rem 0rem 0rem 0rem;
   display: flex;
   justify-content: center;
   align-items: center;
-height: 500px;
   background-color: #000; 
 }
 video{
-  height: 1000px;
+  height: auto;
   width: 100%;
 }
