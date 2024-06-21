@@ -20,12 +20,12 @@ const Navbar = () => {
             </div>
         <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
           <li>
-          <a href="#Navbar">
+          <a href="#Hero">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#ProgressSectionn">
+                <a href="#ProgressSection">
                   About
                 </a>
               </li>

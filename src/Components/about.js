@@ -28,7 +28,7 @@ function About() {
     };
 
     return (
-        <div className="about_container">
+        <div className="about_container" id='About'>
             <div className="about_title">
                 <h1>About Us</h1>
                 <p>

@@ -40,7 +40,7 @@ function Hero() {
     }, [displayText, isDeleting, loopNum, typingSpeed, textArray]);
 
     return (
-        <div className="hero-container">
+        <div className="hero-container" id="Hero">
         <div className="items_left">
         <div className="hero-text">
                 <p className="the_text">At Patch-Bear We <span className="what_we_do">{displayText}</span> Websites</p> 

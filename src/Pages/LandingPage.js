@@ -29,25 +29,25 @@ function LandingPage(){
       </section>
     
 
-            <section id='Hero' className="fade-section" data-aos="fade-up">
+            <section className="fade-section" data-aos="fade-up">
             <Hero/>
             </section>
-            <section id='ProgressSection' className="fade-section" data-aos="fade-up">
+            <section className="fade-section" data-aos="fade-up">
             <ProgressSection/>
             </section>
-            <section id='About' className="fade-section" data-aos="fade-up">
+            <section className="fade-section" data-aos="fade-up">
             <About/>
             </section>
-            <section id='VideoSection' className="fade-section" data-aos="fade-up">
+            <section className="fade-section" data-aos="fade-up">
                 <VideoSection/>
             </section>
-            <section id='Portfolio' className="fade-section" data-aos="fade-up">
+            <section className="fade-section" data-aos="fade-up">
                 <Portfolio/>
             </section>
-            <section id='ContactUs' className="fade-section" data-aos="fade-up">
+            <section className="fade-section" data-aos="fade-up">
         <ContactUs/>
        </section>
-        <section id='Footer'>
+        <section>
               <Footer/>
             </section>
        

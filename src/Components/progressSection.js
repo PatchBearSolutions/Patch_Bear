@@ -19,7 +19,7 @@ function ProgressSection() {
     }, []);
 
     return (
-        <div className="progress_container">
+        <div className="progress_container" id='ProgressSection'>
             <h1 className="progress_title">What We Do</h1>
             <div className="circular-progress-container">
                 {progressValues.map((progress, index) => (

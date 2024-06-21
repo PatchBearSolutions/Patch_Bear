@@ -41,7 +41,7 @@ const ContactUs = () => {
 
   return (
     <div className="contact_section">
-      <h2>Contact Us</h2>
+      <h2 id='ContactUs'>Contact Us</h2>
       <div className="contact-us">
         <div>
           <img src={ContactImage} alt="Contact" height={200} width={250} />
