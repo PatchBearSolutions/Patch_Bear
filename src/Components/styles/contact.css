@@ -41,12 +41,12 @@ padding: 2rem;
   }
   .contact-us input,
   .contact-us textarea {
-    color: white;
-    background-color: 3px solid #319BC9;
+    background-color: black;
     border-radius: 4px;
     width: 100%;
     font-size: 24px;
     padding: 0.5rem;
+    outline: #fff solid;
   }
   .contact-us input:focus,
   .contact-us textarea:focus {
