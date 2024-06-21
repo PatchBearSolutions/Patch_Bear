@@ -33,8 +33,7 @@ function About() {
                 <h1>About Us</h1>
                 <p>
                     With over 5 years of experience in the industry, Patch Bear is dedicated to providing top-notch digital solutions that drive success. 
-                    Our team of seasoned professionals is committed to delivering excellence in every project, 
-                    combining technical expertise with a deep understanding of your business needs. 
+                    Our team of seasoned professionals is committed to delivering excellence in every project.
                 </p>
             </div>
             <div className="about_kids">
